@@ -5,6 +5,7 @@ let title = document.getElementById('title')
 let container = document.getElementById('flexCont')
 let copy = document.getElementById('copy')
 let copyContainer = document.getElementById('copyCont')
+let noTxt = document.getElementById('noText')
 let encript = {
 
     'criptograf': ['enter', 'imes', 'ai', 'ober', 'ufat'],
@@ -23,11 +24,12 @@ function exe(text, textTransform){
 
         addClass(img, 'hidden')
         addClass(title, 'hidden')
-
         addClass(output, 'outText')
         addClass(container, 'changeflex')
+        removeClass(output, 'hidden')
         removeClass(copy, 'hidden')
         addClass(copyContainer, 'copy')
+        addClass(noTxt, 'hidden')
        
     }else{
 
@@ -36,9 +38,10 @@ function exe(text, textTransform){
         removeClass(title, 'hidden')
         removeClass(img, 'hidden')
         removeClass(container, 'changeflex')
+        removeClass(noTxt, 'hidden')
 
+        addClass(output, 'hidden')
         addClass(copy, 'hidden')
-        exValue(output, 'Digite um texto que você deseja criptografar ou descriptografar.')
     } 
 }
 function btnDescript(){
